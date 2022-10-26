@@ -1,22 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import { React, useState } from "react";
+import "./App.css";
 //asdasdad
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+const [search, setSearch] = useState(""); //the search term for the movie
+const [selected, setSelected] = useState(""); //show the popup if true 
+const [apiResults, setApiResults] = useState([]); //hold the results from the API
+  return   (
+    <div>
+      <header>
+        <h1>Movie Database</h1>
+        <h4>Search and then click on a Movie to see the plot</h4>
       </header>
     </div>
   );
